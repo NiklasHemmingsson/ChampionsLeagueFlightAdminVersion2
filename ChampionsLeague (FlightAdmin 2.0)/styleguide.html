@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="sv">
+    
+    <head>
+    <meta charset="utf-8">
+        
+      <!-- Aktiverar JQuery-->
+      <script src="DataTables/jQuery-3.2.1/jquery-3.2.1.min.js"></script>
+        
+      <!-- Aktiverar Datatables' CSS. -->
+      <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css">
+      
+      <!-- Aktiverar Datatables.js plug-in. -->
+      <script src="DataTables/datatables.min.js"></script>
+      
+     <script>
+        
+        //Aktiverar exempeltabell
+        $(document).ready( function () {
+        $('#table_styleguide').DataTable( {
+        //Avaktiverar funktionen sök som inkluderas genom Datatables.js
+        "searching": false,
+        //Avaktiverar funktionen paging som inkluderas genom Datatables.js 
+        "paging": false
+        });
+           });
+          
+    
+    </script>
+        
+        
+    <!-- Länkar till CSS -->
+    <link href="lab1.css" rel="stylesheet">
+    <title>Styleguide</title>
+    </head>
+
+    
+    <body class="styleguide">   
+        
+<!-- Rad för Headern -->
+ <div class="row">
+      
+      <!-- Kolumn med width:100%-->
+      <div class="col-100" id="styleguideheader">
+            <h1>Styleguide</h1>
+      </div>
+     
+ </div>
+
+<!-- Skapar en rad för Rutsystem -->
+<div class="row">
+    <!-- Kolumn med width:25% för Rutsystem Beskrivning-->
+    <div class="col-25">
+        
+        Rutsystem<br><br>
+        
+        Rutsystemet är egentligen ett radsystem. Raden ställer man till 100% bredd och sen skapar man kolumner inuti denna. Storleken på kolumnerna bestäms genom att sätta ett procentvärde som anpassas efter radens totala bredd. 
+            
+        </div>
+            
+    <!-- Kolumn med width:25% för Rutsystem demonstration-->
+    <div class="col-25">
+        
+        <!-- Skapar en row2 för att demonstrera rutsystemet -->
+        <div class="row2">
+      
+            <div class="col-100" id="header">
+                <h1>Header style</h1>
+            </div>     
+      
+            </div>
+        
+            <div class="row2">
+          
+            <div class="col-475">
+                <h2>Rubrik</h2>
+            </div>
+          
+            <!-- Används som margin mellan Box1 och Box2. -->
+            <div class="col-5"></div>
+        
+            <!-- Ruta 2 (högerövre) -->
+            <div class="col-475">
+                <h2>Rubrik</h2>
+            </div>
+        
+            </div>
+
+        
+    </div>
+        
+        <!-- Kolumn med width:25% för Rutsystem HTML-Kod. Använder contenteditable för redigbar textruta. -->
+        <div contenteditable="true" class="col-25">
+            HTML<br><br>
+      
+           <br>
+      
+            &lt;div class="row"&gt; <br><br>
+      
+            &lt;div class="col-100" id="header"&gt; <br>
+                &lt;h1&gt;Header Rubrik&lt;/h1&gt;<br>
+            &lt;/div&gt; <br><br>
+      
+            &lt;/div&gt;<br><br><br>
+            
+                &lt;div class="row"&gt;<br><br>
+          
+                    &lt;div class="col-475"&gt;<br>
+                        &lt;h2&gt;Rubrik&lt;/h2&gt;<br>
+                    &lt;/div&gt;<br><br>
+          
+                    &lt;div class="col-5"&gt;&lt;/div&gt;<br><br>
+        
+                    &lt;div class="col-475"&gt;<br>
+                        &lt;h2&gt;Rubrik&lt;/h2&gt;<br>
+                    &lt;/div&gt;<br><br>
+
+                &lt;/div&gt;<br><br>
+
+            </div>
+    
+            <!-- Kolumn med width:25% för Rutsystem CSS-Kod. Använder contenteditable för redigbar textruta.-->
+            <div contenteditable="true" class="col-25">
+            CSS<br><br>
+            
+            * { <br>
+                box-sizing: border-box; <br>
+            } <br>
+
+            .row { <br>
+    
+                margin-bottom: 30px;<br>
+                margin-left: 130px;<br>
+                margin-right: 130px;<br>
+    
+                display: flex;<br>
+            }<br>
+
+            .row::after { <br>
+                content: "";<br>
+                clear: both;<br>
+                display: table;<br>
+    
+            }<br>
+
+[class*="col-"] {<br>
+    float: left;<br>
+    padding: 15px;<br>
+}<br>
+.col-5 {<br>
+    width:5%;<br>
+}<br>
+
+.col-25 { <br>
+    width:25%; <br>
+    background: rgba(255,255,255,.6); <br>
+}<br>
+                
+.col-33 { <br>
+    width: 33%; <br>
+    background: rgba(255,255,255,.6); <br>
+} <br>
+
+.col-475 { <br>
+    width:47.5%; <br>
+    padding: 15px;<br>
+    padding-top: 25px;<br>
+    background: rgba(255,255,255,.6); <br>
+}<br>
+
+.col-100 {<br>
+    width: 100%;<br>
+    text-align: center;<br>
+    background: rgba(255,255,255,.6);<br>
+}<br>
+
+            
+            
+
+    </div>
+            
+            </div>
+      <!-- Skapar rad för typografi -->
+      <div class="row">    
+          
+    <!-- Kolumn med width:33% för Text CSS-Kod. -->
+    <div class="col-33">
+       
+        Samtlig text förutom knapptexten och länkar har svart färg.<br>
+        Till huvudrubriker, underrubriker och knapptexten används typsnittet avenir,<br> till huvudrubrikerna används dock en tunnare version.<br> 
+        Till formulärrubriker och paragrafer används typsnittet Times-Roman.
+        
+     </div>
+            <!-- Kolumn med width:33% för Typografi CSS-Kod. -->
+            <div class="col-33">
+                <!-- itemtypes används för att skapa en grå bakgrund -->
+                <div class="itemtypes">
+                    <h1>Huvudrubrik</h1><br>
+                    <h2>Underrubrik</h2><br>
+                    <p>Paragraf</p><br>
+                    <label>Rubriker till formulär</label>
+                </div>
+            </div>
+                
+                <!-- Kolumn med width:33% för Text CSS-Kod. Använder contenteditable för redigbar textruta.-->
+                <div contenteditable="true" class="col-33">
+                    CSS<br><br>
+                    Huvudrubriker:<br><br>
+                        
+                        h1 {<br>
+                        font-family: avenir;<br>
+                        font-weight: lighter;<br>
+                        color: black;<br>
+                        font-size: 40px;<br>
+                        margin: 10px;<br>
+                        }<br><br>
+                    
+                    Underrubriker:<br><br>
+                    
+                    h2 {<br>
+                    color: black;<br>
+                    font-family: avenir;<br>
+                    margin: 0;<br>
+                    text-align: center;<br>
+                        }<br><br>
+                    
+                    Paragrafer:<br><br>
+                    
+                    p {<br>
+                    margin: 0;<br>
+                    color: black;<br>
+                    text-align: center;<br>
+                    font-family: Times-Roman;<br>
+                    font-weight: bold; <br>
+                        }<br><br>
+                    
+                    Rubriker till formulär:<br><br>
+                    
+                    label {<br>
+                    color: black;<br>
+                    font-family: Times-Roman;<br>
+                        }<br>
+                    
+                
+        
+                </div>
+
+            
+            </div>    
+            <!-- Skapar rad för färger -->
+            <div class="row">
+            
+            
+            
+    <!-- Kolumn med width:33% för Färger Beskrivning-->
+    <div class="col-33">
+
+        På sidan används tre färger. Lådorna använder sig av en vit färg med en opacitet på 60%. All text använder sig av svart färg. När man för muspekaren över en knapp så får knappen en grå bakgrundsfärg.
+        
+    </div>
+                
+        <!-- Kolumn med width:33% för Färger demonstration-->
+        <div class="col-33">
+
+            <!-- Skapar textruta med svart färg -->
+            <div class="colorBoxBlack">
+            color:black; / #000000
+        </div>
+            <!-- Skapar textruta med vit färg -->
+            <div class="colorBoxWhite">
+            rgba(255,255,255,.6)
+                
+        </div>
+            <!-- Skapar en textruta med grå färg -->
+            <div class="colorBoxGrey">
+            #cccccc
+                
+        </div>
+            
+        </div>
+             <!-- Kolumn med width:33% för Text CSS-Kod. Använder contenteditable för redigbar textruta.-->
+            <div contenteditable="true" class="col-33">
+                
+                CSS<br><br>
+                Färg på lådorna:<br><br>
+                
+                .exempel { <br>
+                background: rgba(255,255,255,.6);<br>
+                    }<br><br><br>
+                
+                Färg på texten:<br><br>
+                
+                h1, h2, {
+                color: black;
+                }
+                <br><br><br>
+                
+                Färg på knappar vid hovring: <br><br>
+                
+                #skicka:hover { <br>
+                background: #cccccc; <br>
+                text-decoration: none;<br>
+                cursor:pointer; <br>
+                }
+                <br><br>
+                Färg på knapptexten: <br> <br>
+                
+                #skicka { <br>
+                color: #000000; <br>
+                }
+            </div>
+
+            
+        </div>
+        
+        <!-- Skapar rad för tabeller. -->
+        <div class="row">
+         
+            
+            <div class="col-33">
+            
+                Till tabellerna används en plugin kallad Datatables. För att använda denna behöver man ladda ner en css-fil och en javascript-fil tillhörande Datatables men även jQuery (version 3 eller senare). Man behöver använda samma struktur i HTML-koden för tabellerna som presenteras till höger. Sedan anropar man de andra filerna i head-elementet.
+                
+                
+            </div>
+            
+            
+            
+            
+            
+            <div class="col-33">
+                
+                
+                <table id="table_styleguide" class="display">
+        
+                <thead>
+    
+                    <tr>
+            
+                        <th>Header1</th><th>Header2</th><th>Header3</th><th>Header4</th>
+    
+                    </tr>
+    
+                </thead>
+        
+                <tbody>
+        
+                    <tr>
+            
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                
+                    </tr>
+        
+    
+                </tbody>
+        
+                </table>
+    
+ 
+            
+            </div>
+            
+            
+            
+            
+            
+            <!-- Kolumn med width:33% för Tabellers Kod. Använder contenteditable för redigbar textruta.-->
+            <div contenteditable="true" class="col-33">
+            
+                HTML<br><br>
+                
+                Kod i &lt;head&gt;:<br><br>
+                
+                &lt;script src="jquery-3.2.1.min.js"&gt;&lt;/script&gt;<br>
+      
+      &lt;link rel="stylesheet" type="text/css" href="datatables.min.css"&gt;<br>
+      
+      &lt;script type="text/javascript" charset="utf-8" src="datatables.min.js"&gt;&lt;/script&gt;<br>
+      
+     &lt;script&gt;<br>
+        
+        $(document).ready( function () {<br>
+    $('#table_id').DataTable({<br>
+        "searching": false, <br>
+        "paging": false <br>
+        });<br>
+           });<br>
+          
+    &lt;/script&gt;<br><br>
+                
+                Kod för tabell:<br><br>
+                
+                &lt;table id="table_id" class="display"&gt;<br>
+        
+                &lt;thead&gt;<br>
+    
+                &lt;tr&gt;<br>
+            
+                &lt;th&gt;Header1&lt;/th&gt;&lt;th&gt;Header2&lt;/th&gt;&lt;th&gt;Header3&lt;/th&gt;&lt;th&gt;Header4&lt;/th&gt;<br>
+    
+                &lt;/tr&gt;<br>
+    
+                &lt;/thead&gt;<br>
+        
+                &lt;tbody&gt;<br>
+        
+                &lt;tr&gt;<br>
+            
+                &lt;td&gt;Data&lt;/td&gt;<br>
+            
+                &lt;td&gt;Data&lt;/td&gt;<br>
+            
+                &lt;td&gt;Data&lt;/td&gt;<br>
+            
+                &lt;td&gt;Data&lt;/td&gt;<br>
+            
+                &lt;/tr&gt;<br>
+        
+    
+                &lt;/tbody&gt;<br>
+        
+                &lt;/table&gt;<br>
+                
+            
+            </div>
+
+        </div>
+        
+        <!-- Skapar rad för formulär -->
+        <div class="row">
+
+    <!-- Kolumn med width:33% för Formulär Beskrivning.-->
+    <div class="col-33">
+        
+        Formuläret är centrerat inom lådan. Bredden på textfältet är 30% så brett som lådan det är i. Knappen har rundade hörn och har en vit färg och knapptexten har en svart färg. Vid hovring av knappen ändras bakgrunden till en grå färg.
+       
+
+    </div>
+            
+        <!-- Kolumn med width:33% för Formulär demonstration.-->
+        <div class="col-33">
+        
+            <form action="index.php" method="get">
+        
+            <label>Sök efter klubb och land utifrån skytteligaplacering</label><br>
+    
+            <input type="text" name="mySearch"><br>
+        
+            <input type="submit" name= "Skicka" value="Skicka" id="skicka">
+            
+            </form>
+                
+
+        </div>
+            
+            <!-- Kolumn med width:33% för Formulärs HTML- och CSS-Kod. Använder contenteditable för redigbar textruta.-->
+            <div contenteditable="true" class="col-33">
+        
+                HTML<br><br>
+            &lt;form action="index.php" method="get"&gt;<br>
+        
+        
+            &lt;label&gt;Rubrik för textfält&lt;/label&gt;<br>
+        
+        
+            &lt;input type="text" name="mySearch"&gt;&lt;br&gt;<br>
+        
+     
+            &lt;input type="submit" name= "Skicka" value="Skicka" id="skicka"&gt;<br>
+        
+            &lt;/form&gt;<br><br>
+            
+                CSS <br><br>
+                
+                Formuläret:<br><br>
+                
+                form {<br>
+                text-align: center;<br>
+                margin-top:10px;<br>
+                }<br><br>
+                
+                Textfältet:<br><br>
+                
+                input[type="text"] {<br>
+                height:30px;<br>
+                width:30%;<br>
+                margin-top:10px;<br>
+                margin-left: auto;<br>
+                margin-right: auto;<br>
+                }<br><br>
+                
+                
+                Knappen:<br><br>
+                
+                #skicka { <br>
+                margin:auto;<br>
+                margin-top: 10px;<br>
+                margin-bottom: 10px;<br>
+                display:block;<br>
+                -webkit-border-radius:11;<br>
+                -moz-border-radius:11;<br>
+                border-radius:11px;<br>
+                font-family: Arial;<br>
+                color: #292929;<br>
+                font-size: 17px;<br>
+                background: #ffffff;<br>
+                padding: 10px 20px 10px 20px;<br>
+                border: solid #b7b7b7 1px;<br>
+                text-decoration: none;<br>
+    
+                }<br>
+
+                #skicka:hover {<br>
+                background: #cccccc;<br>
+                text-decoration: none;<br>
+                cursor:pointer;<br>
+                }
+            </div>
+            
+            
+            
+            
+        </div>
+            
+    
+        <!-- Skapar rad för länkar -->
+        <div class="row">
+            
+        <!-- Kolumn med width:33% för beskrivning av länkar.-->
+        <div class="col-33">
+  
+            Alla länkar på sidan är kursiva och använder sig av default länkfärg. <br><br>
+            Länkar i footern använder sig av en annan marginal.
+            <br><br>
+            Länkar inuti div på externa formulärssidor centreras.
+        </div>
+            
+        <!-- Kolumn med width:33% för demonstration av länkar.-->
+        <div class="col-33">
+                
+                 <!-- itemtypes används för att skapa en grå bakgrund -->
+                <div class="itemtypes">
+                    <a href="index.php">Index.php</a>   
+                </div>
+        </div>
+            <!-- Kolumn med width:33% för länkars CSS-Kod. Använder contenteditable för redigbar textruta.-->
+            <div contenteditable="true" class="col-33">
+                CSS
+                <br><br>
+                Länkar:<br><br>
+                
+                a {<br>
+                font-style: italic;<br>
+                    }<br><br>
+                
+                Länkar i footer:<br><br>
+
+                footer > a {<br>
+                margin: 40px;<br>
+                    }<br><br>
+                
+                Länkar inuti div på externa formulärssidor: <br><br>
+                
+                .linkToStart { <br>
+                margin: auto; <br>
+                text-align: center; <br>
+                }
+            </div>
+            
+            
+        </div>
+        
+        <!-- Skapar rad för beskrivning av Grafik/Bilder.-->
+        <div class="row">
+            
+             <!-- Kolumn med width:33% för Beskrivning av Grafik/Bilder.-->
+            <div class="col-33">
+
+            Den enda bilden som används är en bakgrundsbild. Bilden är fixerad och påverkas inte av scrollning. 
+
+            </div>
+            
+             <!-- Kolumn med width:33% för demonstration av bakgrundsbild.-->
+            <div class="col-33">
+                <img src="soccer.jpg" id="backgroundImage" alt="Bakgrundsbild">
+            
+            </div>
+            
+             <!-- Kolumn med width:33% för länkars bakgrundsbildens CSS-kod. Använder contenteditable för redigbar textruta.-->
+            <div contenteditable="true" class="col-33">
+                
+                Bakgrundsbild:<br><br>
+                CSS<br><br>
+                body.skytteliga {<br>
+                background-image: url(soccer.jpg);<br>
+                background-repeat: no-repeat;<br>
+                background-attachment: fixed;<br>
+                background-size: cover;<br>
+                    }<br>
+
+            </div>
+            
+        </div>
+            
+    <!-- Skapar en rad för footern -->
+    <div class="row">
+        <!-- Kolumn med width:100%-->
+        <div class="col-100">
+        
+            <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fhome.mi.sh.se%2F~sh17hp1695%2Findividuell%2Fstyleguide.html">Validate HTML</a>
+            
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhome.mi.sh.se%2F~sh17hp1695%2Findividuell%2Fstyleguide.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv">Validate CSS</a>
+        
+        </div>
+          
+        </div>
+    
+      
+
+    
+    
+    
+    
+    </body>
+
+</html>

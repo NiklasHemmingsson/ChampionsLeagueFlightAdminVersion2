@@ -1,0 +1,240 @@
+/* Style för body på styleguide och hemsidan*/
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Style för body på hemsidan*/
+body.skytteliga {
+  background-image: url(soccer.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+/* Style är body på styleguiden*/
+body.styleguide {
+    background-color: lightblue;
+    width: 100%;
+}
+
+/* Grå bakgrund för styleguiden för att man ska kunna se texten där den är vit*/
+.itemtypes {
+    background-color: gray
+}
+
+/* Style för footer på styleguide */
+footer {
+    height:80px;
+    text-align: center;
+    position:absolute;
+    bottom:0;
+    background: rgba(255,255,255,.6);
+    padding-top: 15px;
+    min-width: 100%;
+}
+
+/*Specifika rutnätet för styleguiden*/
+* {
+    box-sizing: border-box;
+}
+
+/* Style för samtliga rader */
+.row {
+    margin-bottom: 30px;
+    margin-left: 130px;
+    margin-right: 130px;
+    display: flex;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table; 
+}
+
+/* Unik row för header samt två boxar inuti kolumn*/
+.row2{
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.row2::after{
+    content: "";
+    clear: both;
+    display: table; 
+}
+
+/* Style för samtliga klasser med col- */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* Nedan finns olika klasser med olika bredder som används för anpassning av rutnätet. Vissa rutor har en vit bakgrund med 60% opacitet.*/
+.col-5 {
+    width:5%;
+}
+.col-20 {
+    width:20%;
+}
+.col-25 {
+    width:25%;
+    background: rgba(255,255,255,.6);
+}
+.col-33 {
+    width: 33%;
+    background: rgba(255,255,255,.6);
+}
+
+.col-475 {
+    width:47.5%;
+    padding: 15px;
+    padding-top: 25px;
+    background: rgba(255,255,255,.6); 
+}
+
+.col-100 {
+    width: 100%;
+    text-align: center;
+    background: rgba(255,255,255,.6);
+    background: rgba(255,255,255,.6);
+}
+
+/* Style för headern på den tänkta sidan */
+#header {
+    height:100%;
+}
+
+/* Style för footern på den tänkta sidan */
+#footer {
+    height:80px;
+    text-align: center;
+}
+
+/* Style för headern i styleguide */
+#styleguideheader {
+    padding: 25px;
+}
+
+/* Nedan är style för olika element till den tänkta hemsidan*/
+a {
+    font-style: italic;
+    
+}
+
+footer > a {
+    margin: 40px;
+}
+
+
+h1 {
+    font-family: avenir;
+    font-weight: lighter;
+    color: black;
+    font-size: 40px;
+    margin: 10px;
+}
+
+h2 {
+    color: black;
+    font-family: avenir;
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    color: black;
+    text-align: center;
+    font-family: Times-Roman;
+    font-weight: bold;
+}
+
+/* Nedan finns olika element för formulära på den tänkta sidan */
+form {
+    text-align: center;
+    margin-top:10px;
+}
+
+label {
+    color: black;
+    font-family: Times-Roman;
+    font-weight: bold;
+    font-size:18px;
+}
+
+/* Style för formulärs inmatningsfält */
+input[type="text"]{
+    height:30px;
+    width:30%;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style för knappar i formulär på den tänkta hemsidan*/
+.skicka {
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:block;
+    -webkit-border-radius:11;
+    -moz-border-radius:11;
+    border-radius:11px;
+    font-family: avenir;
+    color: #000000;
+    font-size: 17px;
+    background: #ffffff;
+    padding: 10px 20px 10px 20px;
+    border: solid #b7b7b7 3px;
+    text-decoration: none;
+    
+}
+
+.skicka:hover {
+    background: #cccccc;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+/* Div för att centrera länkar */
+.linkToStart {
+    margin: auto;
+    text-align: center;
+}
+
+/* Färgboxar till styleguiden för att illustrera de olika färgerna som ska användas*/
+.colorBoxBlack {
+    background-color: rgba(0,0,0,1);
+    height: 9em;
+    padding: 10px;;
+    text-align: center;
+    color:white;
+}
+
+.colorBoxWhite {
+    background-color: white;
+    height: 9em;
+    padding: 10px;;
+    border: 1px solid black;
+    text-align: center;
+    color:black;
+}
+
+.colorBoxGrey {
+    background-color: #cccccc;
+    height: 9em;
+    padding: 10px;;
+    border: 1px solid black;
+    text-align: center;
+    color:black;
+}
+
+/* Style för att kunna illustrera bakgrundsbilden i styleguiden*/
+#backgroundImage {
+    width:100%;
+}
+
+
